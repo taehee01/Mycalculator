@@ -122,7 +122,6 @@ public class NormalCalculatorActivity extends AppCompatActivity {
                     });
 
                     if(mAudioTrack == null) {
-                        int mBufferSize = AudioRecord.getMinBufferSize(44100, AudioFormat.CHANNEL_IN_STEREO, AudioFormat.ENCODING_PCM_16BIT);
                         mAudioTrack = new AudioTrack(AudioManager.STREAM_MUSIC, 44100, AudioFormat.CHANNEL_IN_STEREO, AudioFormat.ENCODING_PCM_16BIT, mBufferSize, AudioTrack.MODE_STREAM);
                     }
                     mPlayThread.start();
